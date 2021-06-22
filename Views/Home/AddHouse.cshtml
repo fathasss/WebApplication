@@ -1,0 +1,60 @@
+﻿@model WebApplication1.Models.Estate
+
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" action="AddHouse">
+    @{ 
+        string[] nameArray = { "Mahalle", "City", "Sokak", "Metre Kare", "Banyo Sayısı", "Oda Sayısı", "Bina Yaşı", "Kullanım" , "Mobilya Durumu", "Açıklama" };
+    }
+    <div class="mb-3">
+        <input name="Mahalle" class="form-control" placeholder="Mahalle Adı">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.Mahalle)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="City" class="form-control" placeholder="Şehir Adı">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.City)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Sokak" class="form-control" placeholder="Sokak Adı">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.Sokak)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Metre Kare" class="form-control" placeholder="Metre Kare">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.metreSquare)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Banyo Sayısı" class="form-control" placeholder="Banyo Sayısı">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.banyoNumber)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Oda Sayısı" class="form-control" placeholder="Oda Sayısı">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.odaNumber)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Bina Yaşı" class="form-control" placeholder="Bina Yaşı">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.binaAge)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Kullanım" class="form-control" placeholder="Kullanım">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.kullanimStatus)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Kimden" class="form-control" placeholder="Kimden">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.sahipName)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Mobilya Durumu" class="form-control" placeholder="Mobilya Durumu">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.mobilyaStatus)</div>
+    </div><br />
+    <div class="mb-3">
+        <input name="Açıklama" class="form-control" placeholder="Açıklama">
+        <div id="emailHelp" class="form-text">@Html.ValidationMessageFor(p => p.homeInfo)</div>
+    </div><br />
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Gizlilik Sözleşmesini kabul ediyorum.</label>
+    </div><br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

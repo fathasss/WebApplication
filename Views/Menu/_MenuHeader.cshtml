@@ -1,0 +1,65 @@
+﻿@model List<WebApplication1.Models.Menu>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .buttonClass {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .buttonClass2 {
+            background-color: rgb(103,118,128);
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        } 
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="col-md-9">
+                <div class="navbar-header">
+                    <a href="../Home/Index"><p class="navbar-brand">Bilecik Emlak</p></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    @{
+                        foreach (var has in Model)
+                        {
+                            <li>
+                                <a class="nav-link text-white" href="#">@has.Header &emsp;</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-success buttonClass2">Giriş Yap</button>
+                <button type="button" onclick="location.href=' @Url.Action("AddHouse", "Home")'"class="btn btn-success buttonClass">Ücretsiz İlan Ver</button>
+            </div>
+        </div>        
+    </nav>
+</body>
+</html>
+

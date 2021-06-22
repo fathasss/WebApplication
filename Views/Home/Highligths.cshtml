@@ -1,0 +1,18 @@
+﻿@model List<WebApplication1.Models.Estate>
+<div class="col-md-9">
+    <h5><strong>Öne Çıkarılan İlanlar</strong></h5>
+</div>
+<div class="col-md-3">
+    <button type="button" class="btn btn-success buttonClass2">Tüm Öne Çıkan İlanlar</button>
+</div>
+<div class="w3-row-padding w3-grayscale">
+    @foreach (var house in Model)
+    {
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="@house.Photo" alt="Jane" style="width:100%">
+            <p>@house.City</p>
+            <p class="w3-opacity">@house.Sokak<br />@house.Mahalle</p>
+            <p><button onclick="window.location.href ='/Home/EstateInfo/@house.ilanID'" class="w3-button w3-light-grey w3-block">Göz Gezdir</button></p>
+        </div>
+    }
+</div>

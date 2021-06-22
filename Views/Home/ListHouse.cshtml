@@ -1,0 +1,41 @@
+﻿@model List<WebApplication1.Models.Estate>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Sayı</th>
+            <th scope="col">İlan Numarası</th>
+            <th scope="col">Sokak</th>
+            <th scope="col">Mahalle</th>
+            <th scope="col">Şehir</th>
+            <th scope="col">Kimden</th>
+            <th scope="col">Mobilya Durumu</th>
+            <th scope="col">Kullanım Durumu</th>
+            <th scope="col">Metre Kare</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 1;
+            foreach (var has in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@has.ilanNumber</td>
+                    <td>@has.Sokak</td>
+                    <td>@has.Mahalle</td>
+                    <td>@has.City</td>
+                    <td>@has.sahipName</td>
+                    <td>@has.mobilyaStatus</td>
+                    <td>@has.kullanimStatus</td>
+                    <td>@has.metreSquare</td>
+                </tr>
+                i++;
+            }
+        }
+    </tbody>
+</table>
+

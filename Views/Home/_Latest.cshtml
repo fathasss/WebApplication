@@ -1,0 +1,13 @@
+﻿@model List<WebApplication1.Models.Estate>
+<hr/>
+<h5><strong>En Yeni İlanlar</strong></h5>
+<div class="w3-row-padding w3-grayscale">
+    @foreach (var cityHome in Model)
+    {
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <img src="@cityHome.Photo" alt="Jane" style="width:100%">
+            <h3>@cityHome.City</h3>
+            <p class="w3-opacity">@cityHome.numberAd 'den fazla ilan</p>
+        </div>
+    }       
+</div>

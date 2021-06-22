@@ -1,0 +1,42 @@
+﻿@model WebApplication1.Models.Estate
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container px-5 py-5">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card-deck">
+                <div class="card">
+                    <img src="@Model.Photo" style="max-width:70%;height: auto;" class="card-img-top" alt="..."><br />
+                        <div class="col-md-7">
+                            <h3>Özelllikler</h3>
+                            <div class="card-body">
+                                <p class="card-text"><b>Mahallesi:</b> @Model.Mahalle</p>
+                                <p class="card-text"><b>Adresi:</b> @Model.City</p>
+                                <p class="card-text"><b>İlçe/İl:</b> @Model.Sokak</p>
+                                <p class="card-text"><b>Metre Kare:</b> @Model.metreSquare</p>
+                                <p class="card-text"><b>Bina Yaşı:</b> @Model.binaAge</p>
+                                <p class="card-text"><b>Banyo Sayısı:</b> @Model.banyoNumber</p>
+                                <p class="card-text"><b>Oda Sayısı:</b> @Model.odaNumber</p>
+                                <p class="card-text"><b>Kullanım Durumu:</b> @Model.kullanimStatus</p>
+                                <p class="card-text"><b>Kimden:</b> @Model.sahipName</p>
+                                <p class="card-text"><b>Mobilya Durumu:</b> @Model.mobilyaStatus</p>
+                            </div><br>
+                        </div>
+                        <div class="col-md-5">
+                            <h3>Açıklamalar</h3>
+                            <div class="card-body">
+                                <p class="card-text">@Model.homeInfo</p>
+                            </div>
+
+                            <div class="card-footer">
+                                <small class="text-dark"><b>Emlak Numarası:</b> @Model.ilanNumber</small>
+                            </div>
+                            <a href="/Home/EstateInfo/@Model.ilanID" class="stretched-link"></a>
+                        </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
